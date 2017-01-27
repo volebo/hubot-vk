@@ -1,6 +1,6 @@
 {
   "name": "hubot-vk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A VK.COM adapter for hubot.",
   "main": "dist/",
   "scripts": {
