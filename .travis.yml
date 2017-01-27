@@ -1,0 +1,67 @@
+# Authenticating service for volebo.net
+
+# Copyright (C) Volebo <dev@volebo.net>
+# Copyright (C) Koryukov Maksim <maxkoryukov@gmail.com>
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the MIT License, attached to this software package.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+# You should have received a copy of the MIT License along with this
+# program. If not, see <https://opensource.org/licenses/MIT>.
+
+# http://spdx.org/licenses/MIT
+
+sudo: false
+
+language: node_js
+
+node_js:
+  - node
+  - 4
+  - 6
+  - 7
+
+# env:
+#  global:
+#    - NODE_ENV=dev
+
+matrix:
+  allow_failures:
+    - node_js:
+      - 7
+      - 8
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm config set spin false
+#  - npm install -g npm
+
+install:
+  - npm install -g gulp
+  - npm install -g codecov
+  - npm install -g bithound
+
+script:
+  - npm run lint
+  - gulp build
+  - npm test
+  - npm run coverage
+  - codecov
+  - bithound check git@github.com:$TRAVIS_REPO_SLUG.git
+
+deploy:
+  provider: npm
+  api_key:
+    secure: "md1cb2LSYxkxH72Qygb/Rr3U6NcSo+iTgLb/UINFMUPnf5MOcuaKc0/ImhqClX2rEDrUK2XnLYFsepEg07hUvWttoLv8kztjlpIDm2L9NbdCT7uRQvWQUrPXcoj2ZH3DRWZa0eYdv48w73aohoEociPQMjEpdTkAhpn26wnMQ0TS7ffRxAcyig6JHzXKOfhsJLOMWYvyTytVPeKyGVdwFn/NW/CQcW/oYBEGt3pitt78scib2IT3SdJJc+DdwbJZP2NeWsBehBP/h9NlD1XiR0SaPKnPw/49R7wr+jxl3gDQErd3Ygz0iLjnQnLE5Gh6/Z1vylyLXLYwCyNcZ3rF1lQfvTEwsVvtjOKy8E5ojICEUU3kQZ0nm4Ghh2g9VMyjKIBkzZTMtt072vSx5yZ/qcNuJ4fGggzrNhVVbbpZew32vEBQBM1iSCT+tNpAci87rUOxN5tKKZ7LY/8p4ijhMEqkozupx69OcWcMOsKnOSBiVYIDeiKlvK0U4+g7vZrSHRtIHym8W+5+AQ6SRZKEOUM7jnfx+VHiBtyGGxhjPtMGaHo34dfZyyiE4W2sudrz7Oh9nMNsVv4vimDRWRWID+6I8RcT2hAaJO22p07TLecwPIdjm42qFcoAGdageREbET5ml6xF/Vaq4RVyL9jb//Ulaz5E7NYaOLopnwSrAKQ="
+  email: dev@volebo.net
+  on:
+    tags: true
+    node_js: 6
+    repo: volebo/hubot-vk

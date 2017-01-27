@@ -1,0 +1,62 @@
+{
+  "name": "hubot-vk",
+  "version": "0.0.1",
+  "description": "A VK.COM adapter for hubot.",
+  "main": "dist/",
+  "scripts": {
+    "build": "gulp build",
+    "test": "`npm bin`/mocha",
+    "lint": "`npm bin`/eslint ./",
+    "coverage": "`npm bin`/istanbul cover `npm bin`/_mocha -- --reporter min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volebo/hubot-vk.git"
+  },
+  "keywords": [
+    "hubot",
+    "tinyspeck",
+    "adapter",
+    "vk",
+    "vk.com",
+    "vkontakte",
+    "vkontakte.ru",
+    "volebo",
+    "volebo.net"
+  ],
+  "author": {
+    "name": "Volebo",
+    "url": "http://volebo.net"
+  },
+  "contributors": [
+    {
+      "name": "Koryukov Maksim",
+      "email": "maxkoryukov@gmail.com"
+    }
+  ],
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=3.0.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volebo/hubot-vk/issues"
+  },
+  "homepage": "https://github.com/volebo/hubot-vk#readme",
+  "dependencies": {
+    "debug": "~2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.1.1",
+    "eslint-config-volebo": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-size": "^2.1.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "supertest": "^2.0.0"
+  },
+  "peerDependencies": {
+    "hubot": "^2.19.0"
+  }
+}
