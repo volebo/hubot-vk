@@ -17,7 +17,7 @@
 /node_modules
 /bower_components
 
-/src                 # !!! DIFFERS FROM .gitignore, required for NPM !!!
+/src/**/*            # !!! DIFFERS FROM .gitignore, required for NPM !!!
 # compiled output
 # /dist              # !!! DIFFERS FROM .gitignore, required for NPM !!!
 /tmp
