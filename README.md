@@ -10,6 +10,11 @@ This is a [Hubot](http://hubot.github.com/) adapter to use with [vk.com](https:/
 [![bitHound Overall Score](https://www.bithound.io/github/volebo/hubot-vk/badges/score.svg)](https://www.bithound.io/github/volebo/hubot-vk)
 [![bitHound Dependencies](https://www.bithound.io/github/volebo/hubot-vk/badges/dependencies.svg)](https://www.bithound.io/github/volebo/hubot-vk/master/dependencies/npm)
 
+**IMPORTANT: LOOKING FOR A DEVELOPER**
+**CONTRIBUTIONS ARE WELCOME**
+
+Currently, we have just maintainers, but no developers...
+
 Comprehensive documentation [is NOT available](https://volebo.github.io/hubot-vk).
 
 ## License

@@ -47,6 +47,7 @@ install:
   - npm install -g gulp
   - npm install -g codecov
   - npm install -g bithound
+  - npm install
 
 script:
   - npm run lint

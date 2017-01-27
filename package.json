@@ -44,16 +44,16 @@
   },
   "homepage": "https://github.com/volebo/hubot-vk#readme",
   "dependencies": {
-    "debug": "~2.2.0"
+    "debug": "~2.6.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.1.1",
-    "eslint-config-volebo": "^1.1.0",
+    "eslint-config-volebo": "^2.1.2",
     "gulp": "^3.9.1",
     "gulp-size": "^2.1.0",
     "istanbul": "^0.4.4",
-    "mocha": "^2.5.3",
+    "mocha": "^3.2.0",
     "supertest": "^2.0.0"
   },
   "peerDependencies": {
