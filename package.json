@@ -1,7 +1,7 @@
 {
   "name": "hubot-vk",
   "version": "0.0.3",
-  "description": "A VK.COM adapter for hubot.",
+  "description": "VK.COM adapter for Hubot.",
   "main": "dist/",
   "scripts": {
     "build": "gulp build",
@@ -15,8 +15,8 @@
   },
   "keywords": [
     "hubot",
-    "tinyspeck",
     "adapter",
+    "hubot-adapter",
     "vk",
     "vk.com",
     "vkontakte",
@@ -44,7 +44,6 @@
   },
   "homepage": "https://github.com/volebo/hubot-vk#readme",
   "dependencies": {
-    "debug": "~2.6.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

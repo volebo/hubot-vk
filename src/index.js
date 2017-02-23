@@ -1,8 +1,8 @@
 "use strict"
 
-const debug = require("debug")("hubot-vk")
+const debug         = require("debug")("hubot-vk")
+const VkAdapter     = require("./adapter")
 
-module.exports = function adapter() {
-	debug("init")
-	return null
+exports.use = function use(robot) {
+	return new VkAdapter(robot)
 }
