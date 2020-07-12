@@ -33,10 +33,10 @@ sudo: false
 language: node_js
 
 node_js:
-  - node
   - 10
   - 12
   - 14
+  - 15
 
 # env:
 #  global:
@@ -67,7 +67,7 @@ script:
 deploy:
   provider: npm
   api_key:
-    secure: "md1cb2LSYxkxH72Qygb/Rr3U6NcSo+iTgLb/UINFMUPnf5MOcuaKc0/ImhqClX2rEDrUK2XnLYFsepEg07hUvWttoLv8kztjlpIDm2L9NbdCT7uRQvWQUrPXcoj2ZH3DRWZa0eYdv48w73aohoEociPQMjEpdTkAhpn26wnMQ0TS7ffRxAcyig6JHzXKOfhsJLOMWYvyTytVPeKyGVdwFn/NW/CQcW/oYBEGt3pitt78scib2IT3SdJJc+DdwbJZP2NeWsBehBP/h9NlD1XiR0SaPKnPw/49R7wr+jxl3gDQErd3Ygz0iLjnQnLE5Gh6/Z1vylyLXLYwCyNcZ3rF1lQfvTEwsVvtjOKy8E5ojICEUU3kQZ0nm4Ghh2g9VMyjKIBkzZTMtt072vSx5yZ/qcNuJ4fGggzrNhVVbbpZew32vEBQBM1iSCT+tNpAci87rUOxN5tKKZ7LY/8p4ijhMEqkozupx69OcWcMOsKnOSBiVYIDeiKlvK0U4+g7vZrSHRtIHym8W+5+AQ6SRZKEOUM7jnfx+VHiBtyGGxhjPtMGaHo34dfZyyiE4W2sudrz7Oh9nMNsVv4vimDRWRWID+6I8RcT2hAaJO22p07TLecwPIdjm42qFcoAGdageREbET5ml6xF/Vaq4RVyL9jb//Ulaz5E7NYaOLopnwSrAKQ="
+    secure: "L7aGRc/c7JrSRWsKSa83cDXerxUQhb7ZG3Dr7cYKhKlrKuC4afjPT4hks9cGQzl91oX9SYGeR13o0YsGfLLI0UBIdlwWXiYTWtOrTlRAk4Aj8E0ULiTjLy+eekrFQw7c+5SunZbjmWuYXr1R2nrgwY9K+aa408SaLS1PI0UOznQHWsqZdlAF4IQZ4/0zbyJBaAPB5iPkL5rST2I5/rrAnDdhFffl/DdTbQCUcb5lT12IDIkQP917fASH5+wCBc7fByJMAP8ikEZtZQM/R9ImEHIMnge8A90k/3AnOf9/iEncbL5JGODkgPQyj2PGI8oduu0POcUwNCrm4faAjRshJxOIS3bJS+b7GGkiMC5Y+gXQ0WiODhxBzVpY5XH4UGrB/fmmNe4j/CkH231wQLfHhnZ20Sz6LjxzzsyM6eQV52GOwM+1ohMHKkJhOJM901TrdnDdREGHtc0EspH3tIWVcKvDSXz/mveitpFN+Pl4g/xAQSLtvJkXeVu72mNiW7qzget74Y7A/e/nurFEhIqEAR2Rs3A/ykVoFp1mTRz/Qie1BjlscTALMy9yAQf27vSi9cAe4e+AXcoEkjSlqskDpnbFohnCw6SPCVpER8LUWIxee9QIl/ZNCwM2YMO+Ah6swFl06RJ8Q9P7qcxFJ3fpGJsK7aRlObw/peSp0vrdwVQ="
   email: dev@volebo.net
   on:
     tags: true
