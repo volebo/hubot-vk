@@ -40,12 +40,11 @@
     "node": ">=6.0.0",
     "npm": ">=5.0.0"
   },
-  "main": "dist/",
+  "main": "src/",
   "scripts": {
-    "build": "gulp build",
     "test": "`npm bin`/mocha",
     "lint": "`npm bin`/eslint ./",
-    "coverage": "`npm bin`/istanbul cover `npm bin`/_mocha -- --reporter min"
+    "coverage": "`npm bin`/nyc `npm bin`/mocha"
   },
   "dependencies": {
     "debug": "^4.1.1"

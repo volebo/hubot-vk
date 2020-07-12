@@ -45,7 +45,7 @@ node_js:
 matrix:
   allow_failures:
     - node_js:
-      - 14
+      - 15
 
 cache:
   directories:
@@ -53,17 +53,14 @@ cache:
 
 before_install:
   - npm config set spin false
-#  - npm install -g npm
 
 install:
-  - npm install -g gulp
   - npm install -g codecov
   - npm install
 
 script:
   - npm run lint
-  - gulp build
-  - npm test
+  # - npm run test
   - npm run coverage
   - codecov
 
@@ -74,5 +71,5 @@ deploy:
   email: dev@volebo.net
   on:
     tags: true
-    node_js: 12
+    node_js: 14
     repo: volebo/hubot-vk

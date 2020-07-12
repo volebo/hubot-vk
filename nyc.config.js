@@ -52,11 +52,11 @@ module.exports = {
 		'src/**',
 	],
 
-	// 'exclude': [
-	// 	'**/*.test.js',
-	// 	'**/*.spec.js',
-	// 	'tests/bootstrap.js',
-	// ],
+	'exclude': [
+		'**/*.test.js',
+		'**/*.spec.js',
+		'tests/bootstrap.js',
+	],
 	// ["coverage/**","packages/*/test/**","test/**","test{,-*}.js","**/*{.,-}test.js","**/__tests__/**","**/{ava,babel,jest,nyc,rollup,webpack}.config.js"]]
 
 	'excludeNodeModules': true
