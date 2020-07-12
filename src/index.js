@@ -1,8 +1,9 @@
-"use strict"
+'use strict'
 
-const debug = require("debug")("hubot-vk")
+
+const debug = require('debug')('hubot-vk')
 
 module.exports = function adapter() {
-	debug("init")
+	debug('init')
 	return null
 }

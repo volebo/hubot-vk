@@ -1,3 +1,4 @@
+/*
 ################################################################################
 #                                                                              #
 # db    db  .8888.  dP     888888b 8888ba   .8888.     d8b   db 888888b d8888P #
@@ -27,10 +28,25 @@
 # http://spdx.org/licenses/MIT
 #
 ################################################################################
+*/
 
-/node_modules/*
-/bower_components/*
-/dev/
-/coverage/
-/tmp/
-/log/
+'use strict'
+
+const chai                         = require('chai')
+const path                         = require('path')
+const mh                           = require('@volebo/mocha-helpers')
+
+
+global.expect = chai.expect
+
+global.filename2suitename = mh.filename2suitename
+global.tags = mh.tags
+
+
+const report_path = path.join(
+	process.cwd(),
+	'tmp',
+	'mochawesome-report'
+)
+
+process.env.MOCHAWESOME_REPORTDIR = report_path

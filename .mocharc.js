@@ -1,3 +1,4 @@
+/*
 ################################################################################
 #                                                                              #
 # db    db  .8888.  dP     888888b 8888ba   .8888.     d8b   db 888888b d8888P #
@@ -27,10 +28,27 @@
 # http://spdx.org/licenses/MIT
 #
 ################################################################################
+*/
 
-/node_modules/*
-/bower_components/*
-/dev/
-/coverage/
-/tmp/
-/log/
+'use strict'
+
+module.exports = {
+	reporter: 'list',
+	// reporter: 'spec',
+
+	recursive: true,
+	checkLeaks: true,
+	ui: 'bdd',
+	require: 'tests/bootstrap',
+	extension: ['test.js'],
+
+	diff: true,
+	//opts: './test/mocha.opts',
+	package: './package.json',
+	slow: 75,
+	timeout: 2000,
+
+	spec: [
+		'src/**/*.test.js',
+	]
+}

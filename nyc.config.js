@@ -1,3 +1,4 @@
+/*
 ################################################################################
 #                                                                              #
 # db    db  .8888.  dP     888888b 8888ba   .8888.     d8b   db 888888b d8888P #
@@ -27,10 +28,36 @@
 # http://spdx.org/licenses/MIT
 #
 ################################################################################
+*/
 
-/node_modules/*
-/bower_components/*
-/dev/
-/coverage/
-/tmp/
-/log/
+'use strict'
+
+module.exports = {
+	'all': true,
+
+	// "sourceMap": false,
+	// "instrument": false,
+
+	'reporter': [
+		'html',
+		'lcov',
+		'text',
+		'text-summary',
+		// 'json-summary',
+	],
+
+	'report-dir': './tmp/coverage',
+
+	'include': [
+		'src/**',
+	],
+
+	// 'exclude': [
+	// 	'**/*.test.js',
+	// 	'**/*.spec.js',
+	// 	'tests/bootstrap.js',
+	// ],
+	// ["coverage/**","packages/*/test/**","test/**","test{,-*}.js","**/*{.,-}test.js","**/__tests__/**","**/{ava,babel,jest,nyc,rollup,webpack}.config.js"]]
+
+	'excludeNodeModules': true
+}

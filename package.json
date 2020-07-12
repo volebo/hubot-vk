@@ -2,20 +2,32 @@
   "name": "hubot-vk",
   "version": "0.0.3",
   "description": "A VK.COM adapter for hubot.",
-  "main": "dist/",
-  "scripts": {
-    "build": "gulp build",
-    "test": "`npm bin`/mocha",
-    "lint": "`npm bin`/eslint ./",
-    "coverage": "`npm bin`/istanbul cover `npm bin`/_mocha -- --reporter min"
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   },
+  "author": {
+    "name": "volebo",
+    "url": "http://dev.volebo.net"
+  },
+  "contributors": [
+    {
+      "name": "Maksim Koryukov",
+      "email": "maxkoryukov@volebo.net",
+      "url": "https://www.npmjs.com/~maxkoryukov"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/volebo/hubot-vk.git"
+    "url": "git+https://gitlab.com/volebo/hubot-vk.git"
   },
+  "bugs": {
+    "url": "https://gitlab.com/volebo/hubot-vk/issues"
+  },
+  "homepage": "https://gitlab.com/volebo/hubot-vk#readme",
   "keywords": [
     "hubot",
-    "tinyspeck",
     "adapter",
     "vk",
     "vk.com",
@@ -24,36 +36,27 @@
     "volebo",
     "volebo.net"
   ],
-  "author": {
-    "name": "Volebo",
-    "url": "http://volebo.net"
-  },
-  "contributors": [
-    {
-      "name": "Koryukov Maksim",
-      "email": "maxkoryukov@gmail.com"
-    }
-  ],
   "engines": {
-    "node": ">=4.0.0",
-    "npm": ">=3.0.0"
+    "node": ">=6.0.0",
+    "npm": ">=5.0.0"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volebo/hubot-vk/issues"
+  "main": "dist/",
+  "scripts": {
+    "build": "gulp build",
+    "test": "`npm bin`/mocha",
+    "lint": "`npm bin`/eslint ./",
+    "coverage": "`npm bin`/istanbul cover `npm bin`/_mocha -- --reporter min"
   },
-  "homepage": "https://github.com/volebo/hubot-vk#readme",
   "dependencies": {
     "debug": "^4.1.1"
   },
   "devDependencies": {
+    "@volebo/mocha-helpers": "^0.2.0",
     "chai": "^4.2.0",
-    "eslint": "^6.0.1",
+    "eslint": "^7.4.0",
     "eslint-config-volebo": "^2.3.3",
-    "gulp": "^4.0.2",
-    "gulp-size": "^3.0.0",
-    "istanbul": "^0.4.4",
-    "mocha": "^6.1.4",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
     "supertest": "^4.0.2"
   },
   "peerDependencies": {
