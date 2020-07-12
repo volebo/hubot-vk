@@ -73,3 +73,7 @@ deploy:
     tags: true
     node_js: 14
     repo: volebo/hubot-vk
+
+after_deploy:
+  # Send notification to Slack:
+  - curl -sL https://raw.githubusercontent.com/volebo/dev/master/scripts/im/slack-publish.sh | bash -s -
