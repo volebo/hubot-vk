@@ -34,6 +34,10 @@
 >
 --------------------------------------------------------------------------------
 
+## [0.0.5] - 2017-01-31
+
+:camel:
+
 ## [0.0.4] - 2017-01-31
 
 :sweat_smile: nothing changed, but I've updated dependencies and repo-structure.

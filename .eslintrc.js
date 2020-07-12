@@ -30,6 +30,9 @@
 ################################################################################
 */
 
+'use strict'
+
+
 const path = require('path')
 
 exports = module.exports = {
